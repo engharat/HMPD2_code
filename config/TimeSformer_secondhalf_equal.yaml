@@ -1,0 +1,25 @@
+num_classes: 2
+#channel: ['bs_f200_A','bs_f200_P','bs_f300_A','bs_f300_P','bs_f400_A','bs_f400_P',
+#        'nc_f200_A','nc_f200_P','nc_f300_A','nc_f300_P','nc_f400_A','nc_f400_P',
+#        'pr_025_A','pr_025_P','pr_075_A','pr_075_P','pr_100_A','pr_100_P',
+#        'pr_125_A','pr_125_P','pr_150_A','pr_150_P','pr_175_A','pr_175_P']
+#channel : ['bs_f300_A','bs_f300_P' ]
+#channel : ['HLS_1','HLS_2','HLS_3','HLS_4','HLS_5','HLS_6','HLS_7','HLS_8','HLS_9','HLS_10','HLS_11','HLS_12' ]
+channel : ['RGBequal_5','RGBequal_6','RGBequal_7','RGBequal_8']
+#channel : ['COMPRESSION_1','COMPRESSION_2','COMPRESSION_3','COMPRESSION_4','COMPRESSION_5','COMPRESSION_6','COMPRESSION_7','COMPRESSION_8','COMPRESSION_9',
+#'COMPRESSION_10','COMPRESSION_11','COMPRESSION_12','COMPRESSION_13','COMPRESSION_14','COMPRESSION_15','COMPRESSION_16' ]
+#channel : ['SSSRES_1','SSSRES_2','SSSRES_3','SSSRES_4','SSSRES_5','SSSRES_6','SSSRES_7','SSSRES_8','SSSRES_9','SSSRES_10','SSSRES_11','SSSRES_12',
+#'SSSRES_13','SSSRES_14','SSSRES_15','SSSRES_16','SSSRES_17','SSSRES_18','SSSRES_19','SSSRES_20','SSSRES_21','SSSRES_22','SSSRES_23','SSSRES_24' ]
+num_epochs: 25
+learning_rate: 0.00001
+train_CNN: True
+batch_size: 8
+shuffle: True
+pin_memory: True
+num_workers: 8
+transform_resize: [256, 256]
+transform_crop: [224, 224]
+transform_normalize_mean: [0.5]
+transform_normalize_var: [0.5]
+listofNetwork:
+  'TimeSformer': 'models.alexnet()'

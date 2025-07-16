@@ -1,0 +1,15 @@
+num_classes: 2
+channel: 'HLS2'
+num_epochs: 25
+learning_rate: 0.00001
+train_CNN: True
+batch_size: 32
+shuffle: True
+pin_memory: True
+num_workers: 8
+transform_resize: [100, 100]
+transform_crop: [80, 80]
+transform_normalize_mean: [0.5, 0.5, 0.5]
+transform_normalize_var: [0.5, 0.5, 0.5]
+listofNetwork:
+  'resNet18': 'models.resnet18()'
